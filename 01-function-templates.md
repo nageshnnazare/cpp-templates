@@ -315,14 +315,14 @@ box[green] Key points
 -->
 ```
  +---------------------------------------------------------------+
- | template<class T> ret f(params) { body }                       |
+ | template<class T> ret f(params) { body }                      |
  |                                                               |
  | * T deduced from args, or given explicitly f<T>(...).         |
  | * Same T in two params -> args must match (or force f<T>).    |
- | * Return type: trailing decltype (C++11) or auto (C++14).    |
+ | * Return type: trailing decltype (C++11) or auto (C++14).     |
  | * Overload > specialize for functions.                        |
  | * auto params (C++20) == abbreviated function template.       |
- | * Definitions go in headers.                                   |
+ | * Definitions go in headers.                                  |
  +---------------------------------------------------------------+
 ```
 
