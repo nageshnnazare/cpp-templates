@@ -317,10 +317,10 @@ box[green] Rules
 ```
  +----------------------------------------------------------------+
  | 3 parameter kinds:                                             |
- |   type          <class T>                                       |
+ |   type          <class T>                                      |
  |   non-type      <int N>, <auto V>, <double D>(C++20),          |
  |                 <FixedString S>(C++20 class NTTP)              |
- |   template-tmpl <template<class...> class C>                    |
+ |   template-tmpl <template<class...> class C>                   |
  |                                                                |
  | Any kind can be a pack (...). Defaults follow function rules.  |
  | Prefer plain type params unless you must reapply the template. |
