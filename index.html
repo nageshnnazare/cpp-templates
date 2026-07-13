@@ -2792,10 +2792,10 @@ int main() {
 <h2 id="9-summary">9. Summary</h2>
 <div class="diagram"><div class="diagram-title">Template parameters</div><div class="dbox green"><div class="dbox-title">Three parameter kinds</div><div class="dtext"><b>type</b> — <code>&lt;class T&gt;</code></div><div class="dtext"><b>non-type</b> — <code>&lt;int N&gt;</code>, <code>&lt;auto V&gt;</code>, <code>&lt;double D&gt;</code> (C++20), <code>&lt;FixedString S&gt;</code> (C++20 class NTTP)</div><div class="dtext"><b>template-template</b> — <code>&lt;template&lt;class...&gt; class C&gt;</code></div></div><div class="dbox green"><div class="dbox-title">Rules</div><div class="dtext">Any kind can be a pack (<code>...</code>). Defaults follow function rules.</div><div class="dtext">Prefer plain type params unless you must reapply the template.</div></div></div><details class="ascii-diagram"><summary>Details</summary><pre><code> +----------------------------------------------------------------+
  | 3 parameter kinds:                                             |
- |   type          &lt;class T&gt;                                       |
+ |   type          &lt;class T&gt;                                      |
  |   non-type      &lt;int N&gt;, &lt;auto V&gt;, &lt;double D&gt;(C++20),          |
  |                 &lt;FixedString S&gt;(C++20 class NTTP)              |
- |   template-tmpl &lt;template&lt;class...&gt; class C&gt;                    |
+ |   template-tmpl &lt;template&lt;class...&gt; class C&gt;                   |
  |                                                                |
  | Any kind can be a pack (...). Defaults follow function rules.  |
  | Prefer plain type params unless you must reapply the template. |
