@@ -21,7 +21,7 @@ a cookie (a concrete function/class).
  |   return a<b?b:a; |   "press"      |   return a<b?b:a;    |
  | }                 |                | }                    |
  +-------------------+                +----------------------+
-          |               T = double  +----------------------+
+          |               T = double   +----------------------+
           +------------------------->  | double max(double a, |
                           "press"      |            double b){|
                                        |   ...                |
@@ -235,7 +235,7 @@ box[green] Key points
 -->
 ```
  +------------------------------------------------------------------+
- | TEMPLATE = recipe. Generates code ON DEMAND (instantiation).      |
+ | TEMPLATE = recipe. Generates code ON DEMAND (instantiation).     |
  |                                                                  |
  | Phase 1 (define): syntax + non-dependent names.                  |
  | Phase 2 (use):    dependent names + type checking with T.        |
@@ -245,7 +245,7 @@ box[green] Key points
  |                                                                  |
  | Requirements are implicit (duck typing) unless you use concepts. |
  |                                                                  |
- | Definitions live in headers (needed at point of use).           |
+ | Definitions live in headers (needed at point of use).            |
  +------------------------------------------------------------------+
 ```
 
