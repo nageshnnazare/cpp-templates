@@ -2562,14 +2562,14 @@ int main() {
 <hr />
 <h2 id="12-summary">12. Summary</h2>
 <div class="diagram"><div class="diagram-title">Class templates</div><div class="dbox green"><div class="dbox-title">Key points</div><div class="dtext"><code>template&lt;class T&gt; class C { ... };</code> → family of classes</div><div class="dtext">Args explicit (<code>C&lt;int&gt;</code>) OR deduced via CTAD (C++17)</div><div class="dtext">Members instantiated lazily (only when called)</div><div class="dtext">Member templates enable cross-type ctors/ops</div><div class="dtext">Deduction guides steer CTAD</div><div class="dtext">Static members are per-instantiation; use inline (C++17)</div><div class="dtext">Prefer hidden friends for operators</div><div class="dtext">Definitions live in headers</div></div></div><details class="ascii-diagram"><summary>Details</summary><pre><code> +----------------------------------------------------------------+
- | template&lt;class T&gt; class C { ... };  -&gt; family of classes        |
+ | template&lt;class T&gt; class C { ... };  -&gt; family of classes       |
  |                                                                |
- | * Args explicit (C&lt;int&gt;) OR deduced via CTAD (C++17).         |
- | * Members instantiated lazily (only when called).             |
- | * Member templates enable cross-type ctors/ops.               |
+ | * Args explicit (C&lt;int&gt;) OR deduced via CTAD (C++17).          |
+ | * Members instantiated lazily (only when called).              |
+ | * Member templates enable cross-type ctors/ops.                |
  | * Deduction guides steer CTAD.                                 |
- | * Static members are per-instantiation; use inline (C++17).   |
- | * Prefer hidden friends for operators.                        |
+ | * Static members are per-instantiation; use inline (C++17).    |
+ | * Prefer hidden friends for operators.                         |
  | * Definitions live in headers.                                 |
  +----------------------------------------------------------------+</code></pre></details>
 <p>Next: <a href="03-template-parameters.md">03-template-parameters.md</a>.</p>` },
