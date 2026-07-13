@@ -402,14 +402,14 @@ box[green] Key points
 -->
 ```
  +----------------------------------------------------------------+
- | template<class T> class C { ... };  -> family of classes        |
+ | template<class T> class C { ... };  -> family of classes       |
  |                                                                |
- | * Args explicit (C<int>) OR deduced via CTAD (C++17).         |
- | * Members instantiated lazily (only when called).             |
- | * Member templates enable cross-type ctors/ops.               |
+ | * Args explicit (C<int>) OR deduced via CTAD (C++17).          |
+ | * Members instantiated lazily (only when called).              |
+ | * Member templates enable cross-type ctors/ops.                |
  | * Deduction guides steer CTAD.                                 |
- | * Static members are per-instantiation; use inline (C++17).   |
- | * Prefer hidden friends for operators.                        |
+ | * Static members are per-instantiation; use inline (C++17).    |
+ | * Prefer hidden friends for operators.                         |
  | * Definitions live in headers.                                 |
  +----------------------------------------------------------------+
 ```
