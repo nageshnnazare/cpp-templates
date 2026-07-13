@@ -2271,14 +2271,14 @@ int main() {
 <hr />
 <h2 id="12-summary">12. Summary</h2>
 <div class="diagram"><div class="diagram-title">Function templates</div><div class="dbox green"><div class="dbox-title">Key points</div><div class="dtext"><code>template&lt;class T&gt; ret f(params) { body }</code></div><div class="dtext"><code>T</code> deduced from args, or given explicitly <code>f&lt;T&gt;(...)</code></div><div class="dtext">Same <code>T</code> in two params → args must match (or force <code>f&lt;T&gt;</code>)</div><div class="dtext">Return type: trailing <code>decltype</code> (C++11) or <code>auto</code> (C++14)</div><div class="dtext">Overload &gt; specialize for functions</div><div class="dtext"><code>auto</code> params (C++20) == abbreviated function template</div><div class="dtext">Definitions go in headers</div></div></div><details class="ascii-diagram"><summary>Details</summary><pre><code> +---------------------------------------------------------------+
- | template&lt;class T&gt; ret f(params) { body }                       |
+ | template&lt;class T&gt; ret f(params) { body }                      |
  |                                                               |
  | * T deduced from args, or given explicitly f&lt;T&gt;(...).         |
  | * Same T in two params -&gt; args must match (or force f&lt;T&gt;).    |
- | * Return type: trailing decltype (C++11) or auto (C++14).    |
+ | * Return type: trailing decltype (C++11) or auto (C++14).     |
  | * Overload &gt; specialize for functions.                        |
  | * auto params (C++20) == abbreviated function template.       |
- | * Definitions go in headers.                                   |
+ | * Definitions go in headers.                                  |
  +---------------------------------------------------------------+</code></pre></details>
 <p>Next: <a href="02-class-templates.md">02-class-templates.md</a>.</p>` },
   { name: `4. Class Templates`, path: `02-class-templates.md`, dir: ``, words: 1370, mins: 7, body: `<h1 id="02--class-templates">02 — Class Templates</h1>
