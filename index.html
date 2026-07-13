@@ -13,6 +13,20 @@
 <!-- highlight.js for syntax highlighting (VS Code dark+ theme) -->
 <link id="hljs-theme" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <style>
 /* === CSS Custom Properties for theming === */
 /* - Nagesh N Nazare - */
@@ -1872,7 +1886,7 @@ a cookie (a concrete function/class).</p>
  |   return a&lt;b?b:a; |   &quot;press&quot;      |   return a&lt;b?b:a;    |
  | }                 |                | }                    |
  +-------------------+                +----------------------+
-          |               T = double  +----------------------+
+          |               T = double   +----------------------+
           +-------------------------&gt;  | double max(double a, |
                           &quot;press&quot;      |            double b){|
                                        |   ...                |
@@ -2021,7 +2035,7 @@ always live entirely in <strong>header files</strong> (<code>.hpp</code>), not s
 <hr />
 <h2 id="8-mental-model-summary-card">8. Mental model summary card</h2>
 <div class="diagram"><div class="diagram-title">Template mental model</div><div class="dbox green"><div class="dbox-title">Key points</div><div class="dtext">TEMPLATE = recipe. Generates code <b>on demand</b> (instantiation)</div><div class="dtext">Phase 1 (define): syntax + non-dependent names</div><div class="dtext">Phase 2 (use): dependent names + type checking with <code>T</code></div><div class="dtext"><code>typename</code> before dependent TYPE; <code>template</code> before dependent member TEMPLATE</div><div class="dtext">Requirements are implicit (duck typing) unless you use concepts</div><div class="dtext">Definitions live in headers (needed at point of use)</div></div></div><details class="ascii-diagram"><summary>Details</summary><pre><code> +------------------------------------------------------------------+
- | TEMPLATE = recipe. Generates code ON DEMAND (instantiation).      |
+ | TEMPLATE = recipe. Generates code ON DEMAND (instantiation).     |
  |                                                                  |
  | Phase 1 (define): syntax + non-dependent names.                  |
  | Phase 2 (use):    dependent names + type checking with T.        |
@@ -2031,7 +2045,7 @@ always live entirely in <strong>header files</strong> (<code>.hpp</code>), not s
  |                                                                  |
  | Requirements are implicit (duck typing) unless you use concepts. |
  |                                                                  |
- | Definitions live in headers (needed at point of use).           |
+ | Definitions live in headers (needed at point of use).            |
  +------------------------------------------------------------------+</code></pre></details>
 <p>Next: <a href="01-function-templates.md">01-function-templates.md</a>.</p>` },
   { name: `3. Function Templates`, path: `01-function-templates.md`, dir: ``, words: 1253, mins: 6, body: `<h1 id="01--function-templates">01 — Function Templates</h1>
@@ -6836,6 +6850,13 @@ function prettifyKeepNum(component) {
 const HTML_ESCAPES = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' };
 function escapeHtml(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, c => HTML_ESCAPES[c]); }
 function cleanName(name) { return (name || '').replace(/^\s*\d+\.\s*/, ''); }
+function renderMathInNode(node) {
+    if (window.MathJax && typeof window.MathJax.typesetPromise === 'function') {
+        window.MathJax.typesetPromise([node]).catch(() => {});
+    } else {
+        window.setTimeout(() => renderMathInNode(node), 50);
+    }
+}
 
 const CLOCK_ICON = '<svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8.75-4.25v3.94l2.4 2.4a.75.75 0 0 1-1.06 1.06l-2.62-2.62a.75.75 0 0 1-.22-.53V3.75a.75.75 0 0 1 1.5 0Z"></path></svg>';
 
@@ -6850,6 +6871,9 @@ TAB_DATA.forEach((tab, idx) => {
     panel.id = 'panel-' + idx;
     panel.dataset.dir = tab.dir || '';
     panel.innerHTML = tab.body;
+    if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise([panel]).catch(() => {});
+    }
 
     // Breadcrumb + reading-time meta line (prepended, built once).
     const meta = document.createElement('div');
