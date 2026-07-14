@@ -370,16 +370,16 @@ box[green] Key points
 -->
 ```
  +------------------------------------------------------------------+
- | Deduction matches PARAMETER pattern P against ARGUMENT type A.    |
+ | Deduction matches PARAMETER pattern P against ARGUMENT type A.   |
  |                                                                  |
- | by value  (T)     -> DECAYS (drops const/ref/array).            |
- | by ref    (T&)    -> preserves const, no decay.                 |
- | fwd ref   (T&&)   -> lvalue => T is a reference (collapsing).   |
+ | by value  (T)     -> DECAYS (drops const/ref/array).             |
+ | by ref    (T&)    -> preserves const, no decay.                  |
+ | fwd ref   (T&&)   -> lvalue => T is a reference (collapsing).    |
  |                                                                  |
- | Some positions are NON-deduced (left of ::, expressions).       |
- | Templates can't deduce from {braces}; auto can (init_list).     |
- | decltype/decltype(auto) preserve exact type (no decay).         |
- | Deduction failure != error (SFINAE).                           |
+ | Some positions are NON-deduced (left of ::, expressions).        |
+ | Templates can't deduce from {braces}; auto can (init_list).      |
+ | decltype/decltype(auto) preserve exact type (no decay).          |
+ | Deduction failure != error (SFINAE).                             |
  +------------------------------------------------------------------+
 ```
 
