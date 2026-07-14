@@ -3331,13 +3331,13 @@ int main() {
 <hr />
 <h2 id="10-summary">10. Summary</h2>
 <div class="diagram"><div class="diagram-title">Specialization</div><div class="dbox green"><div class="dbox-title">Key points</div><div class="dtext"><b>Full spec:</b> <code>template&lt;&gt; struct S&lt;int&gt; {...};</code> (one type)</div><div class="dtext"><b>Partial spec:</b> <code>template&lt;class T&gt; struct S&lt;T*&gt; {...};</code> (a family)</div><div class="dtext">Classes &amp; variable templates only (<b>not</b> functions)</div><div class="dtext">Most-specialized match wins; ties = ambiguous</div><div class="dtext">Functions → use <b>overloads</b> / <code>if constexpr</code> / concepts, not spec</div><div class="dtext">Tag dispatch: classic compile-time selection via trait tags</div><div class="dtext"><code>if constexpr</code>: modern one-function alternative</div></div></div><details class="ascii-diagram"><summary>Details</summary><pre><code> +------------------------------------------------------------------+
- | FULL spec:    template&lt;&gt; struct S&lt;int&gt; {...};   (one type)        |
- | PARTIAL spec: template&lt;class T&gt; struct S&lt;T*&gt; {...}; (a family)    |
+ | FULL spec:    template&lt;&gt; struct S&lt;int&gt; {...};   (one type)       |
+ | PARTIAL spec: template&lt;class T&gt; struct S&lt;T*&gt; {...}; (a family)   |
  |   - classes &amp; variable templates only (NOT functions)            |
- |   - most-specialized match wins; ties = ambiguous               |
+ |   - most-specialized match wins; ties = ambiguous                |
  |                                                                  |
  | Functions -&gt; use OVERLOADS / if constexpr / concepts, not spec.  |
- | Tag dispatch: classic compile-time selection via trait tags.    |
+ | Tag dispatch: classic compile-time selection via trait tags.     |
  | if constexpr: modern one-function alternative.                   |
  +------------------------------------------------------------------+</code></pre></details>
 <p>Next: <a href="06-variadic-templates.md">06-variadic-templates.md</a>.</p>` },
