@@ -355,13 +355,13 @@ box[green] Key points
 -->
 ```
  +------------------------------------------------------------------+
- | FULL spec:    template<> struct S<int> {...};   (one type)        |
- | PARTIAL spec: template<class T> struct S<T*> {...}; (a family)    |
+ | FULL spec:    template<> struct S<int> {...};   (one type)       |
+ | PARTIAL spec: template<class T> struct S<T*> {...}; (a family)   |
  |   - classes & variable templates only (NOT functions)            |
- |   - most-specialized match wins; ties = ambiguous               |
+ |   - most-specialized match wins; ties = ambiguous                |
  |                                                                  |
  | Functions -> use OVERLOADS / if constexpr / concepts, not spec.  |
- | Tag dispatch: classic compile-time selection via trait tags.    |
+ | Tag dispatch: classic compile-time selection via trait tags.     |
  | if constexpr: modern one-function alternative.                   |
  +------------------------------------------------------------------+
 ```
