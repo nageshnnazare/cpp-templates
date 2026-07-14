@@ -3056,16 +3056,16 @@ template &lt;class T&gt; void probe(T&amp;&amp; x) {
 </code></pre>
 <h2 id="11-summary">11. Summary</h2>
 <div class="diagram"><div class="diagram-title">Template argument deduction</div><div class="dbox green"><div class="dbox-title">Key points</div><div class="dtext">Deduction matches PARAMETER pattern P against ARGUMENT type A</div><div class="dtext">by value (<code>T</code>) → <b>decays</b> (drops const/ref/array)</div><div class="dtext">by ref (<code>T&amp;</code>) → preserves const, no decay</div><div class="dtext">fwd ref (<code>T&amp;&amp;</code>) → lvalue ⇒ <code>T</code> is a reference (collapsing)</div><div class="dtext">Some positions are <b>non-deduced</b> (left of <code>::</code>, expressions)</div><div class="dtext">Templates can't deduce from <code>{braces}</code>; <code>auto</code> can (<code>init_list</code>)</div><div class="dtext"><code>decltype</code>/<code>decltype(auto)</code> preserve exact type (no decay)</div><div class="dtext">Deduction failure ≠ error (SFINAE)</div></div></div><details class="ascii-diagram"><summary>Details</summary><pre><code> +------------------------------------------------------------------+
- | Deduction matches PARAMETER pattern P against ARGUMENT type A.    |
+ | Deduction matches PARAMETER pattern P against ARGUMENT type A.   |
  |                                                                  |
- | by value  (T)     -&gt; DECAYS (drops const/ref/array).            |
- | by ref    (T&amp;)    -&gt; preserves const, no decay.                 |
- | fwd ref   (T&amp;&amp;)   -&gt; lvalue =&gt; T is a reference (collapsing).   |
+ | by value  (T)     -&gt; DECAYS (drops const/ref/array).             |
+ | by ref    (T&amp;)    -&gt; preserves const, no decay.                  |
+ | fwd ref   (T&amp;&amp;)   -&gt; lvalue =&gt; T is a reference (collapsing).    |
  |                                                                  |
- | Some positions are NON-deduced (left of ::, expressions).       |
- | Templates can't deduce from {braces}; auto can (init_list).     |
- | decltype/decltype(auto) preserve exact type (no decay).         |
- | Deduction failure != error (SFINAE).                           |
+ | Some positions are NON-deduced (left of ::, expressions).        |
+ | Templates can't deduce from {braces}; auto can (init_list).      |
+ | decltype/decltype(auto) preserve exact type (no decay).          |
+ | Deduction failure != error (SFINAE).                             |
  +------------------------------------------------------------------+</code></pre></details>
 <p>Next: <a href="05-specialization.md">05-specialization.md</a>.</p>` },
   { name: `7. Specialization`, path: `05-specialization.md`, dir: ``, words: 1410, mins: 7, body: `<h1 id="05--template-specialization-full--partial">05 — Template Specialization (Full &amp; Partial)</h1>
