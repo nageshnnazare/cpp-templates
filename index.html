@@ -3565,16 +3565,16 @@ std::unique_ptr&lt;T&gt; make_unique_like(Args&amp;&amp;... args) {
 <hr />
 <h2 id="11-summary">11. Summary</h2>
 <div class="diagram"><div class="diagram-title">Variadic templates</div><div class="dbox green"><div class="dbox-title">Packs</div><div class="dtext"><code>template&lt;class... Ts&gt;</code> → type pack; <code>f(Ts... a)</code> → value pack</div><div class="dtext"><code>...</code> before = declare pack; <code>...</code> after = expand</div><div class="dtext"><code>sizeof...(Ts)</code> = element count</div></div><div class="dbox green"><div class="dbox-title">Process packs via</div><div class="dtext">Recursion (head/tail + base case) — classic</div><div class="dtext">Fold expressions (C++17) — <b>preferred</b></div><div class="dtext">Comma fold for per-element side effects</div><div class="dtext"><code>index_sequence</code> for tuple iteration</div><div class="dtext">C++26: native pack indexing <code>xs...[i]</code>, <code>Ts...[i]</code></div></div></div><details class="ascii-diagram"><summary>Details</summary><pre><code> +------------------------------------------------------------------+
- | template&lt;class... Ts&gt;  -&gt; type pack.   f(Ts... a) -&gt; value pack.  |
+ | template&lt;class... Ts&gt;  -&gt; type pack.   f(Ts... a) -&gt; value pack. |
  | '...' before = declare pack; '...' after = expand.               |
- | sizeof...(Ts) = element count.                                    |
+ | sizeof...(Ts) = element count.                                   |
  |                                                                  |
  | Process packs via:                                               |
- |   * recursion (head/tail + base case)  -- classic               |
- |   * fold expressions (C++17)           -- preferred             |
+ |   * recursion (head/tail + base case)  -- classic                |
+ |   * fold expressions (C++17)           -- preferred              |
  |       (xs op ... op init) etc.                                   |
  |   * comma fold for per-element side effects                      |
- |   * index_sequence for tuple iteration                          |
+ |   * index_sequence for tuple iteration                           |
  |                                                                  |
  | C++26: native pack indexing  xs...[i], Ts...[i].                 |
  +------------------------------------------------------------------+</code></pre></details>
