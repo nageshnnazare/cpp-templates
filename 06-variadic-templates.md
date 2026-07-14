@@ -327,16 +327,16 @@ box[green] Process packs via
 -->
 ```
  +------------------------------------------------------------------+
- | template<class... Ts>  -> type pack.   f(Ts... a) -> value pack.  |
+ | template<class... Ts>  -> type pack.   f(Ts... a) -> value pack. |
  | '...' before = declare pack; '...' after = expand.               |
- | sizeof...(Ts) = element count.                                    |
+ | sizeof...(Ts) = element count.                                   |
  |                                                                  |
  | Process packs via:                                               |
- |   * recursion (head/tail + base case)  -- classic               |
- |   * fold expressions (C++17)           -- preferred             |
+ |   * recursion (head/tail + base case)  -- classic                |
+ |   * fold expressions (C++17)           -- preferred              |
  |       (xs op ... op init) etc.                                   |
  |   * comma fold for per-element side effects                      |
- |   * index_sequence for tuple iteration                          |
+ |   * index_sequence for tuple iteration                           |
  |                                                                  |
  | C++26: native pack indexing  xs...[i], Ts...[i].                 |
  +------------------------------------------------------------------+
