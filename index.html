@@ -4348,7 +4348,7 @@ int main() {
 <hr />
 <h2 id="11-summary">11. Summary</h2>
 <div class="diagram"><div class="diagram-title">Perfect forwarding</div><div class="dbox green"><div class="dbox-title">Key points</div><div class="dtext">Forwarding reference = <code>T&amp;&amp;</code> where <code>T</code> is <b>deduced</b> (or <code>auto&amp;&amp;</code>)</div><div class="dtext">lvalue arg → <code>T = X&amp;</code>; rvalue arg → <code>T = X</code></div><div class="dtext">Reference collapsing: only <code>&amp;&amp; &amp;&amp;</code> stays <code>&amp;&amp;</code>; anything with <code>&amp;</code> → <code>&amp;</code></div><div class="dtext"><code>std::forward&lt;T&gt;(x)</code>: conditional cast → restores value category</div><div class="dtext"><code>std::move(x)</code>: unconditional cast to rvalue</div><div class="dtext">Use forward for fwd-ref params; move for owned locals</div><div class="dtext">Pack: <code>forward&lt;Args&gt;(args)...</code> forwards each element</div><div class="dtext">Return: <code>decltype(auto)</code> to forward the <b>result</b> faithfully</div><div class="dtext">Beware greedy forwarding ctors → constrain them</div></div></div><details class="ascii-diagram"><summary>Details</summary><pre><code> +------------------------------------------------------------------+
- | Forwarding reference = T&amp;&amp;  where T is DEDUCED (or auto&amp;&amp;).       |
+ | Forwarding reference = T&amp;&amp;  where T is DEDUCED (or auto&amp;&amp;).      |
  |   lvalue arg -&gt; T = X&amp;  ;  rvalue arg -&gt; T = X.                  |
  | Reference collapsing: only &amp;&amp; &amp;&amp; stays &amp;&amp;; anything with &amp; -&gt; &amp;. |
  |                                                                  |
