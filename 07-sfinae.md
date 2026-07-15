@@ -358,8 +358,8 @@ box[orange] Caveat
  |   void_t<...>            -> member/type detection                |
  |   detection idiom        -> reusable is_detected<Op, Args...>    |
  |                                                                  |
- | Only IMMEDIATE-CONTEXT (signature) failures count; body errors  |
- | are hard errors. Prefer CONCEPTS in C++20+.                     |
+ | Only IMMEDIATE-CONTEXT (signature) failures count; body errors   |
+ | are hard errors. Prefer CONCEPTS in C++20+.                      |
  +------------------------------------------------------------------+
 ```
 
