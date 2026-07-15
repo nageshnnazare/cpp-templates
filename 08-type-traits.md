@@ -340,17 +340,17 @@ box[green] Key points
   text: Use `static_assert(trait, "msg")` for friendly errors
 -->
 ```
- +------------------------------------------------------------------+
- | Predicate traits: ::value / *_v  (compile-time bool)             |
- | Transform traits: ::type  / *_t  (a new type)                    |
- |                                                                  |
- | Built from integral_constant + template specialization.         |
+ +-------------------------------------------------------------------+
+ | Predicate traits: ::value / *_v  (compile-time bool)              |
+ | Transform traits: ::type  / *_t  (a new type)                     |
+ |                                                                   |
+ | Built from integral_constant + template specialization.           |
  | decay_t models pass-by-value; remove_cvref_t (C++20) strips ref+cv|
- | conditional_t = compile-time ?: for types.                       |
- | conjunction/disjunction/negation = short-circuit logic.         |
- | invoke_result_t / is_invocable_v = "call" introspection.        |
- | Use static_assert(trait, "msg") for friendly errors.            |
- +------------------------------------------------------------------+
+ | conditional_t = compile-time ?: for types.                        |
+ | conjunction/disjunction/negation = short-circuit logic.           |
+ | invoke_result_t / is_invocable_v = "call" introspection.          |
+ | Use static_assert(trait, "msg") for friendly errors.              |
+ +-------------------------------------------------------------------+
 ```
 
 Next: [09-perfect-forwarding.md](09-perfect-forwarding.md).
