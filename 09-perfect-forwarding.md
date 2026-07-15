@@ -331,7 +331,7 @@ box[green] Key points
 -->
 ```
  +------------------------------------------------------------------+
- | Forwarding reference = T&&  where T is DEDUCED (or auto&&).       |
+ | Forwarding reference = T&&  where T is DEDUCED (or auto&&).      |
  |   lvalue arg -> T = X&  ;  rvalue arg -> T = X.                  |
  | Reference collapsing: only && && stays &&; anything with & -> &. |
  |                                                                  |
