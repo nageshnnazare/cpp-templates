@@ -4100,17 +4100,17 @@ int main() {
 <p>Runnable: <a href="examples/ch08_traits.cpp"><code>examples/ch08_traits.cpp</code></a>.</p>
 <hr />
 <h2 id="13-summary">13. Summary</h2>
-<div class="diagram"><div class="diagram-title">Type traits</div><div class="dbox green"><div class="dbox-title">Key points</div><div class="dtext">Predicate traits: <code>::value</code> / <code>*_v</code> (compile-time bool)</div><div class="dtext">Transform traits: <code>::type</code> / <code>*_t</code> (a new type)</div><div class="dtext">Built from <code>integral_constant</code> + template specialization</div><div class="dtext"><code>decay_t</code> models pass-by-value; <code>remove_cvref_t</code> (C++20) strips ref+cv</div><div class="dtext"><code>conditional_t</code> = compile-time <code>?:</code> for types</div><div class="dtext"><code>conjunction</code>/<code>disjunction</code>/<code>negation</code> = short-circuit logic</div><div class="dtext"><code>invoke_result_t</code> / <code>is_invocable_v</code> = "call" introspection</div><div class="dtext">Use <code>static_assert(trait, "msg")</code> for friendly errors</div></div></div><details class="ascii-diagram"><summary>Details</summary><pre><code> +------------------------------------------------------------------+
- | Predicate traits: ::value / *_v  (compile-time bool)             |
- | Transform traits: ::type  / *_t  (a new type)                    |
- |                                                                  |
- | Built from integral_constant + template specialization.         |
+<div class="diagram"><div class="diagram-title">Type traits</div><div class="dbox green"><div class="dbox-title">Key points</div><div class="dtext">Predicate traits: <code>::value</code> / <code>*_v</code> (compile-time bool)</div><div class="dtext">Transform traits: <code>::type</code> / <code>*_t</code> (a new type)</div><div class="dtext">Built from <code>integral_constant</code> + template specialization</div><div class="dtext"><code>decay_t</code> models pass-by-value; <code>remove_cvref_t</code> (C++20) strips ref+cv</div><div class="dtext"><code>conditional_t</code> = compile-time <code>?:</code> for types</div><div class="dtext"><code>conjunction</code>/<code>disjunction</code>/<code>negation</code> = short-circuit logic</div><div class="dtext"><code>invoke_result_t</code> / <code>is_invocable_v</code> = "call" introspection</div><div class="dtext">Use <code>static_assert(trait, "msg")</code> for friendly errors</div></div></div><details class="ascii-diagram"><summary>Details</summary><pre><code> +-------------------------------------------------------------------+
+ | Predicate traits: ::value / *_v  (compile-time bool)              |
+ | Transform traits: ::type  / *_t  (a new type)                     |
+ |                                                                   |
+ | Built from integral_constant + template specialization.           |
  | decay_t models pass-by-value; remove_cvref_t (C++20) strips ref+cv|
- | conditional_t = compile-time ?: for types.                       |
- | conjunction/disjunction/negation = short-circuit logic.         |
- | invoke_result_t / is_invocable_v = "call" introspection.        |
- | Use static_assert(trait, "msg") for friendly errors.            |
- +------------------------------------------------------------------+</code></pre></details>
+ | conditional_t = compile-time ?: for types.                        |
+ | conjunction/disjunction/negation = short-circuit logic.           |
+ | invoke_result_t / is_invocable_v = "call" introspection.          |
+ | Use static_assert(trait, "msg") for friendly errors.              |
+ +-------------------------------------------------------------------+</code></pre></details>
 <p>Next: <a href="09-perfect-forwarding.md">09-perfect-forwarding.md</a>.</p>` },
   { name: `11. Perfect Forwarding`, path: `09-perfect-forwarding.md`, dir: ``, words: 1401, mins: 7, body: `<h1 id="09--perfect-forwarding-forwarding-references--reference-collapsing">09 — Perfect Forwarding, Forwarding References &amp; Reference Collapsing</h1>
 <p>&ldquo;Perfect forwarding&rdquo; means: write a wrapper that passes its arguments to another
