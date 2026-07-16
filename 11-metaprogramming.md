@@ -309,16 +309,16 @@ box[green] Key points
 -->
 ```
  +------------------------------------------------------------------+
- | TMP = computing with types & compile-time values.               |
+ | TMP = computing with types & compile-time values.                |
  |   VALUES  -> constexpr functions (preferred).                    |
- |   TYPES   -> templates: traits, TypeList<Ts...>, recursion +    |
- |              specialization for branching/base cases.           |
+ |   TYPES   -> templates: traits, TypeList<Ts...>, recursion +     |
+ |              specialization for branching/base cases.            |
  |                                                                  |
  | TypeList ops: Length, Front, PushFront, Map, Contains...         |
- | std::index_sequence turns N into a pack of 0..N-1.              |
+ | std::index_sequence turns N into a pack of 0..N-1.               |
  | tuple_for_each = index_sequence + comma fold.                    |
- | C++26 reflection will replace much classic type-level TMP.      |
- | Watch instantiation depth & compile-time cost.                  |
+ | C++26 reflection will replace much classic type-level TMP.       |
+ | Watch instantiation depth & compile-time cost.                   |
  +------------------------------------------------------------------+
 ```
 
