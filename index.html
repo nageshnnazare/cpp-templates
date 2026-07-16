@@ -4858,16 +4858,16 @@ value logic as <code>constexpr</code>.</p>
 <hr />
 <h2 id="10-summary">10. Summary</h2>
 <div class="diagram"><div class="diagram-title">Template metaprogramming</div><div class="dbox green"><div class="dbox-title">Key points</div><div class="dtext">TMP = computing with types &amp; compile-time values</div><div class="dtext"><b>VALUES</b> → <code>constexpr</code> functions (preferred)</div><div class="dtext"><b>TYPES</b> → templates: traits, <code>TypeList&lt;Ts...&gt;</code>, recursion + specialization for branching/base cases</div><div class="dtext">TypeList ops: Length, Front, PushFront, Map, Contains...</div><div class="dtext"><code>std::index_sequence</code> turns N into a pack of 0..N-1</div><div class="dtext"><code>tuple_for_each</code> = <code>index_sequence</code> + comma fold</div><div class="dtext">C++26 reflection will replace much classic type-level TMP</div><div class="dtext">Watch instantiation depth &amp; compile-time cost</div></div></div><details class="ascii-diagram"><summary>Details</summary><pre><code> +------------------------------------------------------------------+
- | TMP = computing with types &amp; compile-time values.               |
+ | TMP = computing with types &amp; compile-time values.                |
  |   VALUES  -&gt; constexpr functions (preferred).                    |
- |   TYPES   -&gt; templates: traits, TypeList&lt;Ts...&gt;, recursion +    |
- |              specialization for branching/base cases.           |
+ |   TYPES   -&gt; templates: traits, TypeList&lt;Ts...&gt;, recursion +     |
+ |              specialization for branching/base cases.            |
  |                                                                  |
  | TypeList ops: Length, Front, PushFront, Map, Contains...         |
- | std::index_sequence turns N into a pack of 0..N-1.              |
+ | std::index_sequence turns N into a pack of 0..N-1.               |
  | tuple_for_each = index_sequence + comma fold.                    |
- | C++26 reflection will replace much classic type-level TMP.      |
- | Watch instantiation depth &amp; compile-time cost.                  |
+ | C++26 reflection will replace much classic type-level TMP.       |
+ | Watch instantiation depth &amp; compile-time cost.                   |
  +------------------------------------------------------------------+</code></pre></details>
 <p>Next: <a href="12-constexpr-consteval.md">12-constexpr-consteval.md</a>.</p>` },
   { name: `14. Constexpr Consteval`, path: `12-constexpr-consteval.md`, dir: ``, words: 1405, mins: 7, body: `<h1 id="12--constexpr-consteval-constinit-and-if-constexpr">12 — <code>constexpr</code>, <code>consteval</code>, <code>constinit</code>, and <code>if constexpr</code></h1>
