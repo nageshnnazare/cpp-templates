@@ -355,9 +355,9 @@ box[green] Key points
  |        no vtable, but no common base type.                       |
  | Deducing-this (C++23) replaces most CRTP static_cast boilerplate.|
  | Policy design: inject orthogonal behavior via template params,   |
- |        "off" policies cost nothing.                             |
+ |        "off" policies cost nothing.                              |
  | Type erasure: Concept/Model/Wrapper -> runtime polymorphism      |
- |        without inheritance (std::function/any pattern).         |
+ |        without inheritance (std::function/any pattern).          |
  | Mixins: stack small templates. Expression templates: lazy fusion.|
  +------------------------------------------------------------------+
 ```
