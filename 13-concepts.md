@@ -404,13 +404,13 @@ box[green] Key points
  | Apply:  template<Concept T>  |  void f(Concept auto x)           |
  |         template<class T> requires Expr  |  ... requires Expr    |
  |                                                                  |
- | requires-expr requirements: simple / type / compound / nested.  |
+ | requires-expr requirements: simple / type / compound / nested.   |
  | { e } -> C ;  { e } noexcept -> C ;  typename T::x ;  requires b;|
  |                                                                  |
  | Standard: integral, regular, invocable, ranges/iterator concepts.|
  | Subsumption: stronger constraint wins -> replaces tag dispatch.  |
- | Build overloads from NAMED concepts (for correct subsumption).  |
- | Errors point at the CALL SITE in plain language.                |
+ | Build overloads from NAMED concepts (for correct subsumption).   |
+ | Errors point at the CALL SITE in plain language.                 |
  +------------------------------------------------------------------+
 ```
 
