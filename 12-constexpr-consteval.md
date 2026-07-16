@@ -316,8 +316,8 @@ box[green] Key points
  | consteval : MUST be compile-time (immediate function).           |
  | constinit : compile-time INIT, still mutable.                    |
  | if constexpr: keep one branch, DISCARD (don't instantiate) other.|
- |    -> replaces most SFINAE/tag-dispatch/specialization.         |
- |    -> use always_false<T> for the "else -> error" branch.       |
+ |    -> replaces most SFINAE/tag-dispatch/specialization.          |
+ |    -> use always_false<T> for the "else -> error" branch.        |
  | if consteval (C++23) / is_constant_evaluated() (C++20):          |
  |    pick code by evaluation context (use plain 'if' with the fn). |
  | constexpr functions grew hugely: C++20 vector/string, C++23 more.|
