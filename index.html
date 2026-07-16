@@ -5401,13 +5401,13 @@ int main() {
  | Apply:  template&lt;Concept T&gt;  |  void f(Concept auto x)           |
  |         template&lt;class T&gt; requires Expr  |  ... requires Expr    |
  |                                                                  |
- | requires-expr requirements: simple / type / compound / nested.  |
+ | requires-expr requirements: simple / type / compound / nested.   |
  | { e } -&gt; C ;  { e } noexcept -&gt; C ;  typename T::x ;  requires b;|
  |                                                                  |
  | Standard: integral, regular, invocable, ranges/iterator concepts.|
  | Subsumption: stronger constraint wins -&gt; replaces tag dispatch.  |
- | Build overloads from NAMED concepts (for correct subsumption).  |
- | Errors point at the CALL SITE in plain language.                |
+ | Build overloads from NAMED concepts (for correct subsumption).   |
+ | Errors point at the CALL SITE in plain language.                 |
  +------------------------------------------------------------------+</code></pre></details>
 <p>Next: <a href="14-cpp23-features.md">14-cpp23-features.md</a>.</p>` },
   { name: `16. Cpp23 Features`, path: `14-cpp23-features.md`, dir: ``, words: 1264, mins: 6, body: `<h1 id="14--c23-template-relevant-features">14 — C++23 Template-Relevant Features</h1>
