@@ -10422,11 +10422,11 @@ type erasure where the set of friends is template-parameterized.<\/p>
 <hr />
 <\/div><\/details><details class="sec-fold" open><summary class="sec-summary"><h2 id="10-summary--how-to-try-it">10. Summary &amp; how to try it<\/h2><\/summary><div class="sec-body">
 <div class="diagram"><div class="diagram-title">C++26 template features<\/div><div class="dbox green"><div class="dbox-title">Key points<\/div><div class="dtext"><b>Pack indexing:<\/b> <code>args...[i]<\/code>, <code>Ts...[i]<\/code><\/div><div class="dtext"><b>Binding packs:<\/b> <code>auto [head, ...tail] = t;<\/code><\/div><div class="dtext"><b>Expansion stmt:<\/b> <code>template for (auto e : pack-or-tuple) {...}<\/code><\/div><div class="dtext"><b>Reflection:<\/b> <code>^^X<\/code> (reflect) / <code>[: r :]<\/code> (splice) / <code>std::meta<\/code><\/div><div class="dtext">→ enum↔string, serialization, generic <code>==<\/code>, DI: no macros<\/div><div class="dtext"><code>= delete("reason")<\/code>: friendly deleted-function diagnostics<\/div><div class="dtext"><code>friend Friends...;<\/code> variadic friends<\/div><div class="dtext"><code>constexpr<\/code> bindings, <code>_<\/code> placeholder, <code>constexpr static_assert<\/code> msg<\/div><\/div><\/div><details class="ascii-diagram"><summary>Details<\/summary><pre><code> +------------------------------------------------------------------+
- | Pack indexing:      args...[i],  Ts...[i]                         |
+ | Pack indexing:      args...[i],  Ts...[i]                        |
  | Binding packs:      auto [head, ...tail] = t;                    |
  | Expansion stmt:     template for (auto e : pack-or-tuple) {...}  |
  | Reflection:         ^^X (reflect) / [: r :] (splice) / std::meta |
- |    -&gt; enum&lt;-&gt;string, serialization, generic ==, DI: no macros.  |
+ |    -&gt; enum&lt;-&gt;string, serialization, generic ==, DI: no macros.   |
  | = delete("reason"): friendly deleted-function diagnostics.       |
  | friend Friends...;  variadic friends.                            |
  | constexpr bindings, '_' placeholder, constexpr static_assert msg.|
@@ -10782,11 +10782,11 @@ box[green] Key points
 -->
 \`\`\`
  +------------------------------------------------------------------+
- | Pack indexing:      args...[i],  Ts...[i]                         |
+ | Pack indexing:      args...[i],  Ts...[i]                        |
  | Binding packs:      auto [head, ...tail] = t;                    |
  | Expansion stmt:     template for (auto e : pack-or-tuple) {...}  |
  | Reflection:         ^^X (reflect) / [: r :] (splice) / std::meta |
- |    -> enum<->string, serialization, generic ==, DI: no macros.  |
+ |    -> enum<->string, serialization, generic ==, DI: no macros.   |
  | = delete("reason"): friendly deleted-function diagnostics.       |
  | friend Friends...;  variadic friends.                            |
  | constexpr bindings, '_' placeholder, constexpr static_assert msg.|
