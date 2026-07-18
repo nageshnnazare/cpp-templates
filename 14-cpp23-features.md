@@ -309,14 +309,14 @@ box[green] Key points
 -->
 ```
  +------------------------------------------------------------------+
- | Deducing this: template<class Self> ret f(this Self&& self){...}  |
+ | Deducing this: template<class Self> ret f(this Self&& self){...} |
  |   - one function for &/const&/&&/const&&                         |
- |   - replaces CRTP (no static_cast)                              |
- |   - enables recursive lambdas [](this auto self,...){...}       |
- | if consteval: branch on constant-evaluation context.            |
- | operator<=> = default: generate all comparisons.                |
- | auto(x): language-level decay-copy (safe copies in templates).  |
- | m[i, j]: multidim subscript (mdspan, matrices).                 |
+ |   - replaces CRTP (no static_cast)                               |
+ |   - enables recursive lambdas [](this auto self,...){...}        |
+ | if consteval: branch on constant-evaluation context.             |
+ | operator<=> = default: generate all comparisons.                 |
+ | auto(x): language-level decay-copy (safe copies in templates).   |
+ | m[i, j]: multidim subscript (mdspan, matrices).                  |
  | std::mdspan/expected: policy-based & templated vocabulary types. |
  +------------------------------------------------------------------+
 ```
