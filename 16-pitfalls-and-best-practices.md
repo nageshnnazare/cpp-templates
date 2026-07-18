@@ -262,15 +262,15 @@ box[green] Key points
 -->
 ```
  +------------------------------------------------------------------+
- | typename (dependent type) / template (dependent member template). |
+ | typename (dependent type) / template (dependent member template).|
  | Dependent base names need this-> or Base<T>::.                   |
  | Read the FIRST error + "required from here" trace.               |
  | Can't deduce from {braces}; watch 0 vs nullptr; single-T params. |
- | Constrain greedy forwarding ctors.                              |
- | inline full specializations; define static members once.        |
- | static_assert / concepts for early, readable failures.          |
+ | Constrain greedy forwarding ctors.                               |
+ | inline full specializations; define static members once.         |
+ | static_assert / concepts for early, readable failures.           |
  | Fight bloat: thin-template idiom, const&, extern template.       |
- | Reach for the MODERN tool (concepts, if constexpr, C++23/26).   |
+ | Reach for the MODERN tool (concepts, if constexpr, C++23/26).    |
  +------------------------------------------------------------------+
 ```
 
