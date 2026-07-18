@@ -10804,7 +10804,7 @@ clang++ -std=c++2c examples/ch15_pack_indexing.cpp -o /tmp/d && /tmp/d
 
 Next: [16-pitfalls-and-best-practices.md](16-pitfalls-and-best-practices.md).
 ` },
-  { name: `18. Pitfalls And Best Practices`, path: `16-pitfalls-and-best-practices.md`, dir: ``, words: 1434, mins: 7, body: `<h1 id="16--pitfalls-error-message-survival--best-practices">16 — Pitfalls, Error-Message Survival &amp; Best Practices<\/h1>
+  { name: `18. Pitfalls And Best Practices`, path: `16-pitfalls-and-best-practices.md`, dir: ``, words: 1433, mins: 7, body: `<h1 id="16--pitfalls-error-message-survival--best-practices">16 — Pitfalls, Error-Message Survival &amp; Best Practices<\/h1>
 <p>The knowledge that turns &ldquo;I can write templates&rdquo; into &ldquo;I ship robust template
 code.&rdquo; This chapter is a field guide to the traps and the habits that avoid them.<\/p>
 <hr />
@@ -10946,15 +10946,15 @@ site, not inside the class body.<\/p>
 <hr />
 <\/div><\/details><details class="sec-fold" open><summary class="sec-summary"><h2 id="13-summary">13. Summary<\/h2><\/summary><div class="sec-body">
 <div class="diagram"><div class="diagram-title">Pitfalls and best practices<\/div><div class="dbox green"><div class="dbox-title">Key points<\/div><div class="dtext"><code>typename<\/code> (dependent type) / <code>template<\/code> (dependent member template)<\/div><div class="dtext">Dependent base names need <code>this-&gt;<\/code> or <code>Base&lt;T&gt;::<\/code><\/div><div class="dtext">Read the <b>first<\/b> error + "required from here" trace<\/div><div class="dtext">Can't deduce from <code>{braces}<\/code>; watch <code>0<\/code> vs <code>nullptr<\/code>; single-<code>T<\/code> params<\/div><div class="dtext">Constrain greedy forwarding ctors<\/div><div class="dtext"><code>inline<\/code> full specializations; define static members once<\/div><div class="dtext"><code>static_assert<\/code> / concepts for early, readable failures<\/div><div class="dtext">Fight bloat: thin-template idiom, <code>const&amp;<\/code>, extern template<\/div><div class="dtext">Reach for the <b>modern<\/b> tool (concepts, <code>if constexpr<\/code>, C++23/26)<\/div><\/div><\/div><details class="ascii-diagram"><summary>Details<\/summary><pre><code> +------------------------------------------------------------------+
- | typename (dependent type) / template (dependent member template). |
+ | typename (dependent type) / template (dependent member template).|
  | Dependent base names need this-&gt; or Base&lt;T&gt;::.                   |
  | Read the FIRST error + "required from here" trace.               |
  | Can't deduce from {braces}; watch 0 vs nullptr; single-T params. |
- | Constrain greedy forwarding ctors.                              |
- | inline full specializations; define static members once.        |
- | static_assert / concepts for early, readable failures.          |
+ | Constrain greedy forwarding ctors.                               |
+ | inline full specializations; define static members once.         |
+ | static_assert / concepts for early, readable failures.           |
  | Fight bloat: thin-template idiom, const&amp;, extern template.       |
- | Reach for the MODERN tool (concepts, if constexpr, C++23/26).   |
+ | Reach for the MODERN tool (concepts, if constexpr, C++23/26).    |
  +------------------------------------------------------------------+<\/code><\/pre><\/details>
 <p>Next: <a href="17-cheatsheet.md">17-cheatsheet.md<\/a>.<\/p><\/div><\/details>`, raw: `# 16 — Pitfalls, Error-Message Survival & Best Practices
 
@@ -11220,15 +11220,15 @@ box[green] Key points
 -->
 \`\`\`
  +------------------------------------------------------------------+
- | typename (dependent type) / template (dependent member template). |
+ | typename (dependent type) / template (dependent member template).|
  | Dependent base names need this-> or Base<T>::.                   |
  | Read the FIRST error + "required from here" trace.               |
  | Can't deduce from {braces}; watch 0 vs nullptr; single-T params. |
- | Constrain greedy forwarding ctors.                              |
- | inline full specializations; define static members once.        |
- | static_assert / concepts for early, readable failures.          |
+ | Constrain greedy forwarding ctors.                               |
+ | inline full specializations; define static members once.         |
+ | static_assert / concepts for early, readable failures.           |
  | Fight bloat: thin-template idiom, const&, extern template.       |
- | Reach for the MODERN tool (concepts, if constexpr, C++23/26).   |
+ | Reach for the MODERN tool (concepts, if constexpr, C++23/26).    |
  +------------------------------------------------------------------+
 \`\`\`
 
