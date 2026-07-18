@@ -347,11 +347,11 @@ box[green] Key points
 -->
 ```
  +------------------------------------------------------------------+
- | Pack indexing:      args...[i],  Ts...[i]                         |
+ | Pack indexing:      args...[i],  Ts...[i]                        |
  | Binding packs:      auto [head, ...tail] = t;                    |
  | Expansion stmt:     template for (auto e : pack-or-tuple) {...}  |
  | Reflection:         ^^X (reflect) / [: r :] (splice) / std::meta |
- |    -> enum<->string, serialization, generic ==, DI: no macros.  |
+ |    -> enum<->string, serialization, generic ==, DI: no macros.   |
  | = delete("reason"): friendly deleted-function diagnostics.       |
  | friend Friends...;  variadic friends.                            |
  | constexpr bindings, '_' placeholder, constexpr static_assert msg.|
