@@ -93,7 +93,7 @@ Use the helper script to build everything your compiler supports:
         |                      |                      |
    WHAT you make          HOW you feed it        WHAT you compute
         |                      |                      |
-  +-----+-----+          +-----+------+         +-----+------+
+  +-----+-----+          +-----+------+         +-----+-------+
   | function  |          | type param |         | if constexpr|
   | class     |          | NTTP       |         | constexpr   |
   | variable  |          | template   |         | consteval   |
@@ -105,11 +105,11 @@ Use the helper script to build everything your compiler supports:
                    |                       |
              CONSTRAINING             SELECTING
                    |                       |
-             +-----+-----+           +-----+------+
-             | concepts  |           | overload   |
-             | requires  |           | specialize |
+             +-----+-----+           +-----+-------+
+             | concepts  |           | overload    |
+             | requires  |           | specialize  |
              | SFINAE    |           | tag dispatch|
-             +-----------+           +------------+
+             +-----------+           +-------------+
 ```
 
 Start with [00-mental-model.md](00-mental-model.md).
